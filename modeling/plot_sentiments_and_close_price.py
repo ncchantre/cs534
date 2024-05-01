@@ -1,6 +1,9 @@
 # This script plots the close price and the # of reddit posts and/or scores
+import warnings
+warnings.filterwarnings('ignore')
 from matplotlib import pyplot
 from pandas import read_csv
+from sklearn.preprocessing import MinMaxScaler
 
 df = read_csv('D:/reddit/RS_2022_amazon_emotion_pivoted.csv', header=0)
 values = df.values
